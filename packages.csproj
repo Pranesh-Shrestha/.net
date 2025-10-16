@@ -4,7 +4,8 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <NoWarn>NU1605;NU1606;NU1213</NoWarn>
+    <NoWarn>NU1605;NU1606;NU1213;NU1607</NoWarn>
+    <RestoreIgnoreFailedSources>true</RestoreIgnoreFailedSources>
   </PropertyGroup>
 <ItemGroup>
     <PackageReference Include="xunit" Version="2.4.1" />
