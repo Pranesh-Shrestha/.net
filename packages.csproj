@@ -258,14 +258,7 @@
     <PackageReference Include="Microsoft.IdentityModel.Protocols" Version="5.5.0" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
     <PackageReference Include="Microsoft.NET.Workload.Emscripten.Manifest-6.0.400" Version="6.0.36" />
-    <PackageReference Include="microsoft.net.sdk.ios.manifest-6.0.400" Version="16.4.60" />
-    <PackageReference Include="microsoft.net.sdk.maui.manifest-6.0.400" Version="6.0.553" />
-    <PackageReference Include="microsoft.net.sdk.tvos.manifest-6.0.400" Version="16.4.60" />
-    <PackageReference Include="microsoft.net.sdk.android.manifest-6.0.400" Version="32.0.509" />
     <PackageReference Include="Microsoft.NET.Workload.Mono.ToolChain.Manifest-6.0.400" Version="6.0.36" />
-    <PackageReference Include="microsoft.net.sdk.maccatalyst.manifest-6.0.400" Version="16.4.60" />
-    <PackageReference Include="Microsoft.NETCore.App.Host.win-x64" Version="6.0.36" />
-    <PackageReference Include="microsoft.net.sdk.macos.manifest-6.0.400" Version="13.3.60" />
     <PackageReference Include="Microsoft.CodeCoverage" Version="17.1.0" />
     <PackageReference Include="Microsoft.TestPlatform.TestHost" Version="17.1.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
