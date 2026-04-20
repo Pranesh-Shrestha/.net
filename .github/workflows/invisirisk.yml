@@ -146,11 +146,6 @@ jobs:
           $url = "https://www.powershellgallery.com/api/v2/package/Microsoft.PowerShell.SecretStore/1.0.6"
           Invoke-WebRequest -Uri $url -OutFile "Microsoft.PowerShell.SecretStore.1.0.6.nupkg"
 
-
-jobs:
-  download-packages:
-    runs-on: windows-latest
-    steps:
       - name: Download AWSPowerShell.NetCore 5.0.197
         shell: pwsh
         run: Invoke-WebRequest -Uri "https://www.powershellgallery.com/api/v2/package/AWSPowerShell.NetCore/5.0.197" -OutFile "AWSPowerShell.NetCore.5.0.197.nupkg"
