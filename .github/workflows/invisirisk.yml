@@ -12,26 +12,35 @@ jobs:
     name: Run build
     steps:
       - name: Setup PSE
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
-          api_url: "https://app.invisirisk.com"
-          app_token: ${{ secrets.IR_API_KEY_NET_PROD }}
+          api_url: "https://app.stage.invisirisk.com"
+          app_token: ${{ secrets.IR_API_KEY }}
           
       - uses: actions/checkout@v2
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 9.0.100-rc.2.24474.11
-      - name: Restore dependencies
-        run: dotnet restore
-      - name: Build
-        run: dotnet build --no-restore
+          
+      # - name: Restore dependencies
+      #   run: dotnet restore
+        
+      # - name: Build
+      #   run: dotnet build --no-restore
+        
      # - name: Test
      #   run: dotnet test --no-build --verbosity normal
+
+      - name: Download PSReadLine package
+        shell: pwsh
+        run: |
+          $url = "https://www.powershellgallery.com/api/v2/package/PSReadLine/2.3.4"
+          Invoke-WebRequest -Uri $url -OutFile PSReadLine.2.3.4.nupkg
       
       - name: Cleanup PSE
         if: always()
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           cleanup: "true"
           
