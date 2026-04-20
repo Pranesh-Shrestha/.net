@@ -14,7 +14,7 @@ jobs:
       - name: Setup PSE
         uses: invisirisk/pse-action@develop
         with:
-          api_url: "https://app.dev.invisirisk.com"
+          api_url: "https://app.stage.invisirisk.com"
           app_token: ${{ secrets.IR_API_KEY }}
           
       - uses: actions/checkout@v2
@@ -146,6 +146,51 @@ jobs:
           $url = "https://www.powershellgallery.com/api/v2/package/Microsoft.PowerShell.SecretStore/1.0.6"
           Invoke-WebRequest -Uri $url -OutFile "Microsoft.PowerShell.SecretStore.1.0.6.nupkg"
 
+
+jobs:
+  download-packages:
+    runs-on: windows-latest
+    steps:
+      - name: Download AWSPowerShell.NetCore 5.0.197
+        shell: pwsh
+        run: Invoke-WebRequest -Uri "https://www.powershellgallery.com/api/v2/package/AWSPowerShell.NetCore/5.0.197" -OutFile "AWSPowerShell.NetCore.5.0.197.nupkg"
+
+      - name: Download Microsoft.Graph 2.36.1
+        shell: pwsh
+        run: Invoke-WebRequest -Uri "https://www.powershellgallery.com/api/v2/package/Microsoft.Graph/2.36.1" -OutFile "Microsoft.Graph.2.36.1.nupkg"
+
+      - name: Download ExchangeOnlineManagement 3.9.2
+        shell: pwsh
+        run: Invoke-WebRequest -Uri "https://www.powershellgallery.com/api/v2/package/ExchangeOnlineManagement/3.9.2" -OutFile "ExchangeOnlineManagement.3.9.2.nupkg"
+
+      - name: Download MicrosoftTeams 7.7.0
+        shell: pwsh
+        run: Invoke-WebRequest -Uri "https://www.powershellgallery.com/api/v2/package/MicrosoftTeams/7.7.0" -OutFile "MicrosoftTeams.7.7.0.nupkg"
+
+      - name: Download PnP.PowerShell 3.1.0
+        shell: pwsh
+        run: Invoke-WebRequest -Uri "https://www.powershellgallery.com/api/v2/package/PnP.PowerShell/3.1.0" -OutFile "PnP.PowerShell.3.1.0.nupkg"
+
+      - name: Download VMware.PowerCLI 13.3.0.24145083
+        shell: pwsh
+        run: Invoke-WebRequest -Uri "https://www.powershellgallery.com/api/v2/package/VMware.PowerCLI/13.3.0.24145083" -OutFile "VMware.PowerCLI.13.3.0.24145083.nupkg"
+
+      - name: Download Selenium 3.0.1
+        shell: pwsh
+        run: Invoke-WebRequest -Uri "https://www.powershellgallery.com/api/v2/package/Selenium/3.0.1" -OutFile "Selenium.3.0.1.nupkg"
+
+      - name: Download PSWindowsUpdate 2.2.1.5
+        shell: pwsh
+        run: Invoke-WebRequest -Uri "https://www.powershellgallery.com/api/v2/package/PSWindowsUpdate/2.2.1.5" -OutFile "PSWindowsUpdate.2.2.1.5.nupkg"
+
+      - name: Download Pansies 2.11.0
+        shell: pwsh
+        run: Invoke-WebRequest -Uri "https://www.powershellgallery.com/api/v2/package/Pansies/2.11.0" -OutFile "Pansies.2.11.0.nupkg"
+
+      - name: Download Microsoft.PowerShell.ConsoleGuiTools 0.7.7
+        shell: pwsh
+        run: Invoke-WebRequest -Uri "https://www.powershellgallery.com/api/v2/package/Microsoft.PowerShell.ConsoleGuiTools/0.7.7" -OutFile "Microsoft.PowerShell.ConsoleGuiTools.0.7.7.nupkg"
+
       
       - name: Cleanup PSE
         if: always()
@@ -162,7 +207,7 @@ jobs:
    - name: Gather Status
      uses: invisirisk/pse-action@develop
      with:
-      api_url: "https://app.dev.invisirisk.com"
+      api_url: "https://app.stage.invisirisk.com"
       app_token: ${{ secrets.IR_API_KEY }}
       send_job_status: "true"
       debug: "true"
