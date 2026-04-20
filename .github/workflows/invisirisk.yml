@@ -32,17 +32,42 @@ jobs:
      # - name: Test
      #   run: dotnet test --no-build --verbosity normal
 
+      - name: Download 7Zip4Powershell package
+        shell: pwsh
+        run: |
+          $url = "https://www.powershellgallery.com/api/v2/package/7Zip4Powershell/1.9.0"
+          Invoke-WebRequest -Uri $url -OutFile 7Zip4Powershell.1.9.0.nupkg
+
       - name: Download PSReadLine package
         shell: pwsh
         run: |
           $url = "https://www.powershellgallery.com/api/v2/package/PSReadLine/2.3.4"
           Invoke-WebRequest -Uri $url -OutFile PSReadLine.2.3.4.nupkg
 
-      - name: Download 7Zip4Powershell package
+      - name: Download Az.Accounts package
         shell: pwsh
         run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/7Zip4Powershell/1.9.0"
-          Invoke-WebRequest -Uri $url -OutFile 7Zip4Powershell.1.9.0.nupkg
+          $url = "https://www.powershellgallery.com/api/v2/package/Az.Accounts/5.3.4"
+          Invoke-WebRequest -Uri $url -OutFile Az.Accounts.5.3.4.nupkg
+
+      - name: Download DellBIOSProvider package
+        shell: pwsh
+        run: |
+          $url = "https://www.powershellgallery.com/api/v2/package/DellBIOSProvider/2.10.1"
+          Invoke-WebRequest -Uri $url -OutFile DellBIOSProvider.2.10.1.nupkg
+
+      - name: Download PackageManagement package
+        shell: pwsh
+        run: |
+          $url = "https://www.powershellgallery.com/api/v2/package/PackageManagement/1.4.8.1"
+          Invoke-WebRequest -Uri $url -OutFile PackageManagement.1.4.8.1.nupkg
+
+      - name: Download Az.Storage package
+        shell: pwsh
+        run: |
+          $url = "https://www.powershellgallery.com/api/v2/package/Az.Storage/9.6.0"
+          Invoke-WebRequest -Uri $url -OutFile Az.Storage.9.6.0.nupkg
+
       
       - name: Cleanup PSE
         if: always()
