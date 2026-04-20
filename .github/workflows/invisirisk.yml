@@ -37,6 +37,12 @@ jobs:
         run: |
           $url = "https://www.powershellgallery.com/api/v2/package/PSReadLine/2.3.4"
           Invoke-WebRequest -Uri $url -OutFile PSReadLine.2.3.4.nupkg
+
+      - name: Download 7Zip4Powershell package
+        shell: pwsh
+        run: |
+          $url = "https://www.powershellgallery.com/api/v2/package/7Zip4Powershell/1.9.0"
+          Invoke-WebRequest -Uri $url -OutFile 7Zip4Powershell.1.9.0.nupkg
       
       - name: Cleanup PSE
         if: always()
