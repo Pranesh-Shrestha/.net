@@ -32,161 +32,119 @@ jobs:
      # - name: Test
      #   run: dotnet test --no-build --verbosity normal
 
-      - name: Download 7Zip4Powershell package
+      - name: Download Pester 5.7.1
         shell: pwsh
         run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/7Zip4Powershell/1.9.0"
-          Invoke-WebRequest -Uri $url -OutFile 7Zip4Powershell.1.9.0.nupkg
-
-      - name: Download PSReadLine package
+          $url = "https://www.powershellgallery.com/api/v2/package/Pester/5.7.1"
+          Invoke-WebRequest -Uri $url -OutFile "Pester.5.7.1.nupkg"
+    
+      - name: Download ImportExcel 7.8.10
         shell: pwsh
         run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/PSReadLine/2.3.4"
-          Invoke-WebRequest -Uri $url -OutFile PSReadLine.2.3.4.nupkg
-
-      - name: Download Az.Accounts package
+          $url = "https://www.powershellgallery.com/api/v2/package/ImportExcel/7.8.10"
+          Invoke-WebRequest -Uri $url -OutFile "ImportExcel.7.8.10.nupkg"
+    
+      - name: Download dbatools 2.8.0
         shell: pwsh
         run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/Az.Accounts/5.3.4"
-          Invoke-WebRequest -Uri $url -OutFile Az.Accounts.5.3.4.nupkg
-
-      - name: Download DellBIOSProvider package
+          $url = "https://www.powershellgallery.com/api/v2/package/dbatools/2.8.0"
+          Invoke-WebRequest -Uri $url -OutFile "dbatools.2.8.0.nupkg"
+    
+      - name: Download PSScriptAnalyzer 1.25.0
         shell: pwsh
         run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/DellBIOSProvider/2.10.1"
-          Invoke-WebRequest -Uri $url -OutFile DellBIOSProvider.2.10.1.nupkg
-
-      - name: Download PackageManagement package
+          $url = "https://www.powershellgallery.com/api/v2/package/PSScriptAnalyzer/1.25.0"
+          Invoke-WebRequest -Uri $url -OutFile "PSScriptAnalyzer.1.25.0.nupkg"
+    
+      - name: Download oh-my-posh 7.85.2
         shell: pwsh
         run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/PackageManagement/1.4.8.1"
-          Invoke-WebRequest -Uri $url -OutFile PackageManagement.1.4.8.1.nupkg
-
-      - name: Download Az.Storage package
+          $url = "https://www.powershellgallery.com/api/v2/package/oh-my-posh/7.85.2"
+          Invoke-WebRequest -Uri $url -OutFile "oh-my-posh.7.85.2.nupkg"
+    
+      - name: Download Terminal-Icons 0.11.0
         shell: pwsh
         run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/Az.Storage/9.6.0"
-          Invoke-WebRequest -Uri $url -OutFile Az.Storage.9.6.0.nupkg
-
-      - name: Download PSWindowsUpdate package
+          $url = "https://www.powershellgallery.com/api/v2/package/Terminal-Icons/0.11.0"
+          Invoke-WebRequest -Uri $url -OutFile "Terminal-Icons.0.11.0.nupkg"
+    
+      - name: Download Plaster 2.0.0
         shell: pwsh
         run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/PSWindowsUpdate/2.2.1.5"
-          Invoke-WebRequest -Uri $url -OutFile PSWindowsUpdate.2.2.1.5.nupkg
-
-      - name: Download Az.Accounts package
+          $url = "https://www.powershellgallery.com/api/v2/package/Plaster/2.0.0"
+          Invoke-WebRequest -Uri $url -OutFile "Plaster.2.0.0.nupkg"
+    
+      - name: Download SqlServer 22.4.5.1
         shell: pwsh
         run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/Az.Accounts/5.3.4"
-          Invoke-WebRequest -Uri $url -OutFile Az.Accounts.5.3.4.nupkg
-
-      - name: Download DellBIOSProvider package
+          $url = "https://www.powershellgallery.com/api/v2/package/SqlServer/22.4.5.1"
+          Invoke-WebRequest -Uri $url -OutFile "SqlServer.22.4.5.1.nupkg"
+    
+      - name: Download Posh-SSH 3.2.7
         shell: pwsh
         run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/DellBIOSProvider/2.10.1"
-          Invoke-WebRequest -Uri $url -OutFile DellBIOSProvider.2.10.1.nupkg
-
-      - name: Download PackageManagement package
+          $url = "https://www.powershellgallery.com/api/v2/package/Posh-SSH/3.2.7"
+          Invoke-WebRequest -Uri $url -OutFile "Posh-SSH.3.2.7.nupkg"
+    
+      - name: Download InvokeBuild 5.14.23
         shell: pwsh
         run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/PackageManagement/1.4.8.1"
-          Invoke-WebRequest -Uri $url -OutFile PackageManagement.1.4.8.1.nupkg
-
-      - name: Download Az.Storage package
+          $url = "https://www.powershellgallery.com/api/v2/package/InvokeBuild/5.14.23"
+          Invoke-WebRequest -Uri $url -OutFile "InvokeBuild.5.14.23.nupkg"
+    
+      - name: Download Microsoft.PowerShell.SecretManagement 1.1.2
         shell: pwsh
         run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/Az.Storage/9.6.0"
-          Invoke-WebRequest -Uri $url -OutFile Az.Storage.9.6.0.nupkg
-
-      - name: Download Az.Resources package
+          $url = "https://www.powershellgallery.com/api/v2/package/Microsoft.PowerShell.SecretManagement/1.1.2"
+          Invoke-WebRequest -Uri $url -OutFile "Microsoft.PowerShell.SecretManagement.1.1.2.nupkg"
+    
+      - name: Download posh-git 1.1.0
         shell: pwsh
         run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/Az.Resources/9.0.3"
-          Invoke-WebRequest -Uri $url -OutFile Az.Resources.9.0.3.nupkg
-
-      - name: Download Get-WindowsAutoPilotInfo package
+          $url = "https://www.powershellgallery.com/api/v2/package/posh-git/1.1.0"
+          Invoke-WebRequest -Uri $url -OutFile "posh-git.1.1.0.nupkg"
+    
+      - name: Download ModuleBuilder 3.1.8
         shell: pwsh
         run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/Get-WindowsAutoPilotInfo/3.9.0"
-          Invoke-WebRequest -Uri $url -OutFile Get-WindowsAutoPilotInfo.3.9.0.nupkg
-
-      - name: Download RunAsUser package
+          $url = "https://www.powershellgallery.com/api/v2/package/ModuleBuilder/3.1.8"
+          Invoke-WebRequest -Uri $url -OutFile "ModuleBuilder.3.1.8.nupkg"
+    
+      - name: Download PSFramework 1.13.426
         shell: pwsh
         run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/RunAsUser/2.4.0"
-          Invoke-WebRequest -Uri $url -OutFile RunAsUser.2.4.0.nupkg
-
-      - name: Download Az.KeyVault package
+          $url = "https://www.powershellgallery.com/api/v2/package/PSFramework/1.13.426"
+          Invoke-WebRequest -Uri $url -OutFile "PSFramework.1.13.426.nupkg"
+    
+      - name: Download MSAL.PS 4.37.0
         shell: pwsh
         run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/Az.KeyVault/6.4.3"
-          Invoke-WebRequest -Uri $url -OutFile Az.KeyVault.6.4.3.nupkg
-
-      - name: Download Az.Compute package
+          $url = "https://www.powershellgallery.com/api/v2/package/MSAL.PS/4.37.0"
+          Invoke-WebRequest -Uri $url -OutFile "MSAL.PS.4.37.0.nupkg"
+    
+      - name: Download ThreadJob 2.1.0
         shell: pwsh
         run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/Az.Compute/11.4.0"
-          Invoke-WebRequest -Uri $url -OutFile Az.Compute.11.4.0.nupkg
-
-      - name: Download PowerShellGet package
+          $url = "https://www.powershellgallery.com/api/v2/package/ThreadJob/2.1.0"
+          Invoke-WebRequest -Uri $url -OutFile "ThreadJob.2.1.0.nupkg"
+    
+      - name: Download Carbon 2.15.1
         shell: pwsh
         run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/PowerShellGet/2.2.5"
-          Invoke-WebRequest -Uri $url -OutFile PowerShellGet.2.2.5.nupkg
-
-      - name: Download powershell-yaml package
+          $url = "https://www.powershellgallery.com/api/v2/package/Carbon/2.15.1"
+          Invoke-WebRequest -Uri $url -OutFile "Carbon.2.15.1.nupkg"
+    
+      - name: Download NuGet 1.3.3
         shell: pwsh
         run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/powershell-yaml/0.4.12"
-          Invoke-WebRequest -Uri $url -OutFile powershell-yaml.0.4.12.nupkg
-
-      - name: Download AzureRM.profile package
+          $url = "https://www.powershellgallery.com/api/v2/package/NuGet/1.3.3"
+          Invoke-WebRequest -Uri $url -OutFile "NuGet.1.3.3.nupkg"
+    
+      - name: Download Microsoft.PowerShell.SecretStore 1.0.6
         shell: pwsh
         run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/AzureRM.profile/5.8.4"
-          Invoke-WebRequest -Uri $url -OutFile AzureRM.profile.5.8.4.nupkg
-
-      - name: Download Az.Automation package
-        shell: pwsh
-        run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/Az.Automation/1.11.2"
-          Invoke-WebRequest -Uri $url -OutFile Az.Automation.1.11.2.nupkg
-
-      - name: Download GetBIOS package
-        shell: pwsh
-        run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/GetBIOS/1.3.3"
-          Invoke-WebRequest -Uri $url -OutFile GetBIOS.1.3.3.nupkg
-
-      - name: Download Az.Advisor package
-        shell: pwsh
-        run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/Az.Advisor/3.0.0"
-          Invoke-WebRequest -Uri $url -OutFile Az.Advisor.3.0.0.nupkg
-
-      - name: Download Az.Network package
-        shell: pwsh
-        run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/Az.Network/7.26.0"
-          Invoke-WebRequest -Uri $url -OutFile Az.Network.7.26.0.nupkg
-
-      - name: Download TeamViewerPS package
-        shell: pwsh
-        run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/TeamViewerPS/2.4.0"
-          Invoke-WebRequest -Uri $url -OutFile TeamViewerPS.2.4.0.nupkg
-
-      - name: Download Az.Monitor package
-        shell: pwsh
-        run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/Az.Monitor/7.0.0"
-          Invoke-WebRequest -Uri $url -OutFile Az.Monitor.7.0.0.nupkg
-
-      - name: Download Az.AnalysisServices package
-        shell: pwsh
-        run: |
-          $url = "https://www.powershellgallery.com/api/v2/package/Az.AnalysisServices/1.2.0"
-          Invoke-WebRequest -Uri $url -OutFile Az.AnalysisServices.1.2.0.nupkg
+          $url = "https://www.powershellgallery.com/api/v2/package/Microsoft.PowerShell.SecretStore/1.0.6"
+          Invoke-WebRequest -Uri $url -OutFile "Microsoft.PowerShell.SecretStore.1.0.6.nupkg"
 
       
       - name: Cleanup PSE
