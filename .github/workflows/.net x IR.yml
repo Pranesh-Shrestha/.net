@@ -1,4 +1,4 @@
-name: .NET Build IR
+name: .NET x IR
 
 on:
   workflow_dispatch:
